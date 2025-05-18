@@ -1,0 +1,107 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\title{\textbf{Software Requirements Specification (SRS)\\Tunis Track: Metro Management System}}
+\author{
+  Tunis Business School
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of this document is to define the software requirements for \textit{Tunis Track}, a \textbf{Tunis Metro Management System}, designed to track metro operations in real time, manage schedules, passengers, reports, and system maintenance. The system aims to fix the organizational chaos in Tunisia’s metro transport.
+
+\subsection{Scope}
+The system will:
+\begin{itemize}[noitemsep]
+  \item Track metro movement in real-time (speed, location, status).
+  \item Allow passengers to book a trip using a smart metro card or NFC.
+  \item Allow users to report incidents anonymously.
+  \item Provide admin tools for schedules, logs, and user reports.
+  \item Handle technician assignments and technical logs.
+\end{itemize}
+
+\section{Overall Description}
+
+\subsection{Product Perspective}
+Standalone system with a backend database, admin dashboard, and user interface for real-time info and reporting. Replaces the currently non-existent digital system.
+
+\subsection{Product Functions}
+\begin{itemize}[noitemsep]
+  \item Passenger registration and authentication.
+  \item Smart metro card management.
+  \item Booking a metro trip.
+  \item Real-time metro monitoring: location (latitude/longitude), speed, and status (idle, moving, maintenance).
+  \item Logging ETA vs actual arrival time to compute delays.
+  \item Technicians' technical log entries for assigned metros.
+  \item Incident reporting system.
+\end{itemize}
+
+\subsection{User Classes and Characteristics}
+\begin{itemize}[noitemsep]
+  \item \textbf{Passengers}: Can book trips, report incidents, and track metro status.
+  \item \textbf{Technicians}: Can view and update technical logs.
+  \item \textbf{Administrators}: Have full control of the system including schedules, stations, metros, and technician assignments.
+\end{itemize}
+
+\section{Specific Requirements}
+
+\subsection{Functional Requirements}
+\begin{itemize}[noitemsep]
+  \item \textbf{FR1}: The system shall allow passengers to register and log in.
+  \item \textbf{FR2}: The system shall associate every passenger with a unique metro card.
+  \item \textbf{FR3}: The system shall allow passengers to book trips and validate access based on booking.
+  \item \textbf{FR4}: The system shall track each metro’s real-time status including location and speed.
+  \item \textbf{FR5}: The system shall allow admins to create/edit/delete schedules.
+  \item \textbf{FR6}: The system shall store schedule data including departure and arrival stations times.
+  \item \textbf{FR7}: The system shall allow passengers to issue incident reports.
+  \item \textbf{FR8}: The system shall allow technicians to view and update technical logs related to their assigned metros.
+\end{itemize}
+
+\subsection{Non-Functional Requirements}
+\begin{itemize}[noitemsep]
+  \item \textbf{NFR1}: The system shall provide secure authentication and data encryption.
+  \item \textbf{NFR2}: The system shall provide a responsive interface across desktop and mobile devices.
+  \item \textbf{NFR3}: The system shall allow for scalability to support increasing metro lines or users.
+  \item \textbf{NFR4}: The system shall ensure availability with regular backups and fault tolerance.
+\end{itemize}
+
+\section{Constraints}
+\begin{itemize}[noitemsep]
+  \item Internet access is required for real-time data updates.
+  \item GPS hardware may be needed for live location tracking.
+  \item Only authenticated users may perform advanced operations.
+\end{itemize}
+
+\section{Future Improvements}
+\begin{itemize}[noitemsep]
+  \item AI-based delay prediction.
+  \item Mobile app version for real-time passenger updates.
+  \item Automated maintenance suggestions using historical logs.
+\end{itemize}
+
+\section{Glossary}
+\begin{itemize}[noitemsep]
+  \item \textbf{ETA}: Estimated Time of Arrival.
+  \item \textbf{Metro Card}: A digital or physical card used by passengers (logged-in users) for access and payments.
+\end{itemize}
+
+\end{document}
+
