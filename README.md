@@ -10,7 +10,7 @@
   Live updates on speed, location, and status of all metros such as delays.
 
 - 🎫 **Smart Metro Card System**
-- 
+
 - 🧑‍🔧 **Technician Logs**  
   
 - 🚨 **Anonymous Incident Reporting**  
